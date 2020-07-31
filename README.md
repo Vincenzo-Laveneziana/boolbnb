@@ -32,8 +32,8 @@ Le pull requeste sono benvenute. Per cambiamenti importanti, aprire una issue.
 [MIT](https://choosealicense.com/licenses/mit/)
 
 #### BoolBnB e' un prodotto Team 5
-- Marco Silvestri
 - Vincenzo Laveneziana
+- Marco Silvestri
 - Marco Madeddu
 - Carmine Vitale
 - Rocco De Luca
