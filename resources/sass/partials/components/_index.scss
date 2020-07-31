@@ -1,0 +1,227 @@
+/****************** 
+  INDEX
+******************/
+.index-main{
+    transform: translateY(-100px);
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .video-container {
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        
+        video {
+            transform: scale(1.6);  
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .container-jumbotron {
+        width: 100%;
+        margin-top: 20px;
+        color: $black;
+      
+        h2 {
+            color: $blue;
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .u-jumbotron {
+            width: 100%;
+            z-index: 2;
+            border-radius: 8px;
+
+            .container-search-bar {
+                @include flex-center-center(column,center,center);
+                width: 100%;
+
+                .ap-footer {
+                    display: none;
+                }
+                
+                .algolia-places input {
+                    border-radius: 0;
+                    height: 50px;
+                    border: 1px solid $black;
+                }
+
+                .submit {
+                    background-color: $blue;
+                    width: 100%;
+                    height: 50px;
+                    margin: 20px 0;
+                    border-radius: 25px;
+                    color: white;
+                    font-size: 22px;
+
+                    &:focus { 
+                        outline:0; 
+                        border-radius: 25px;
+                        border: 3px solid rgb(64, 155, 216);
+                    }
+                }  
+            }
+        }
+    }   
+}
+
+
+
+
+
+@media (min-width: 576px) { 
+   
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+    .search {
+        height: 500px;
+        
+        .video-container {
+            height: 500px;
+            padding-top: 35px;
+            position: absolute;
+            
+            video {
+                transform: scale(1.4);  
+            }
+    
+        }
+    
+        .opacity {
+            @include full-width-height;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            position: absolute;
+        }
+    
+        .container-jumbotron {
+            height: 100%;
+            padding-top: 220px;
+            z-index: 2;
+            color: $gray;
+
+            h2 {
+                color: $white;
+            }
+    
+            .u-jumbotron {
+                background-color: white;
+                height: 115px;
+                padding: 5px 30px;
+                box-shadow: 0 6px 15px 0 rgba(0,0,0,.55);
+
+                span {
+                    color: grey;
+                }
+
+                form {
+                    height: 60px;
+                }
+                
+                .container-search-bar {
+                    @include flex-center-center(row,center,center);
+    
+                    .algolia-places input {
+                        height: 40px;
+                        border: 1px solid grey;
+                    }
+    
+                    .submit {
+                        width: 20%;
+                        height: 40px;
+                        margin-left: 20px;
+                    }  
+                }
+            }
+        }   
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .search {
+        
+        .video-container {
+  
+            video {
+                transform: scale(1.5);  
+            }
+        }    
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+    .search {
+        height: 650px;
+        
+        .video-container {
+            height: 650px;
+            padding-top: 0;
+            position: absolute;
+            
+            video {
+                transform: scale(1.2);  
+                width: 100%;
+            }
+    
+        }
+    
+        .opacity {
+            @include full-width-height;
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            position: absolute;
+        }
+    
+        .container-jumbotron {
+            height: 100%;
+            padding-top: 350px;
+            z-index: 2;
+            color: $gray;
+    
+            .u-jumbotron {
+                background-color: white;
+                padding: 5px 30px;
+                box-shadow: 0 6px 15px 0 rgba(0,0,0,.55);
+
+                span {
+                    color: grey;
+                }
+
+                form {
+                    height: 60px;
+                }
+                
+                .container-search-bar {
+                    @include flex-center-center(row,center,center);
+    
+                    .algolia-places input {
+                        height: 40px;
+                        border: 1px solid grey;
+                    }
+    
+                    .submit {
+                        width: 20%;
+                        height: 40px;
+                        margin-left: 20px;
+                    }  
+                }
+            }
+        }   
+    }
+}

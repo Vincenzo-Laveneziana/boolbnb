@@ -1,0 +1,149 @@
+/****************** 
+  Common Style
+******************/
+
+//Mixins
+
+@mixin typography{
+  font-family: $sans-serif;
+  color: $black;
+}
+
+@mixin flex-row-or-column($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin flex-row-or-column-wrap($direction: row, $wrap: wrap) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+
+@mixin flex-center-center($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin reset-list {
+  list-style: none;
+}
+
+@mixin reset-a {
+  text-decoration: none;
+}
+
+@mixin btn-header-nav {
+  padding: 5px 10px;
+  color: #292a2e;
+  border: 1px solid #292a2e;
+  border-radius: 7px;
+  background-color: $white;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover{
+    transition: 0.7s;
+    background: rgb(41, 41, 41);
+    color: $gray;
+  }
+}
+
+@mixin btn-black {
+  padding: 5px;
+  color: $gray;
+  border: 1px solid #292a2e;
+  background: rgb(41, 41, 41);
+  border-radius: 7px;
+  background-color: $brown;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+
+  &:hover{
+    transition: 0.7s;
+    background: rgb(41, 41, 41);
+    color: $gray;
+  }
+}
+
+@mixin btn-jumbotron {
+  padding: 7px 10px;
+  border: 1px solid #30488f;
+  border-radius: 7px;
+  color: $gray;
+  font-size: 15px;
+  cursor: pointer;
+  background:#30488f;
+}
+
+@mixin full-width-height {
+  width: 100%;
+  height: 100%;
+}
+
+
+//General Rules
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  min-height: 100vh;
+  @include flex-row-or-column(column);
+  @include typography;
+}
+
+main {
+  flex-grow: 1;
+  margin-top: 100px;
+}
+
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  background-color: transparent;
+  width:8px;
+}
+
+/* background of the scrollbar except button or resizer */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* scrollbar itself */
+::-webkit-scrollbar-thumb {
+  background-color:#babac0;
+  border-radius:16px;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+  
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+  
+  
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+ 
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+  
+
+}
+
